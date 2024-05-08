@@ -26,3 +26,4 @@ C:\Judah_Kahler_Portfolio\obj\Debug\net8.0\ref\Judah_Kahler_Portfolio.dll
 C:\Judah_Kahler_Portfolio\obj\Debug\net8.0\Judah_Kahler_Portfolio.RazorAssemblyInfo.cache
 C:\Judah_Kahler_Portfolio\obj\Debug\net8.0\Judah_Kahler_Portfolio.RazorAssemblyInfo.cs
 C:\Judah_Kahler_Portfolio\bin\Debug\net8.0\Judah_Kahler_Portfolio.staticwebassets.runtime.json
+C:\Judah_Kahler_Portfolio\obj\Debug\net8.0\Judah_Kahler_Portfolio.sourcelink.json

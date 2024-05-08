@@ -1,14 +1,34 @@
 using Microsoft.AspNetCore.Mvc;
-
 namespace Judah_Kahler_Portfolio.Controllers;   
+
 public class PortfolioController : Controller
 {      
+    private readonly IEmailSender _emailSender;
+
+    public PortfolioController(IEmailSender emailSender)
+    {
+        this._emailSender = emailSender;
+    }
+
     [HttpGet] 
     [Route("")] 
-    public ViewResult Index()        
+    public async Task<IActionResult> Index()  
     {            
+        var receiver = "judah.kahler@gmail.com";      
+        var subject = "Test";
+        var message = "Hello World";
+
+        await _emailSender.SendEmailAsync(receiver, subject, message);
+
         return View("Index");        
     }   
+
+    // [HttpGet] 
+    // [Route("")] 
+    // public ViewResult Index()        
+    // {            
+    //     return View("Index");        
+    // }   
 
     [HttpGet]
     [Route("/connect_four_details")] 

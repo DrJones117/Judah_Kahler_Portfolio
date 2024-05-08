@@ -9,23 +9,23 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = Judah_Kahler_Portfolio
 build_property.RootNamespace = Judah_Kahler_Portfolio
-build_property.ProjectDir = c:\Judah_Kahler_Portfolio\
+build_property.ProjectDir = C:\Judah_Kahler_Portfolio\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 8.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = c:\Judah_Kahler_Portfolio
+build_property.MSBuildProjectDirectory = C:\Judah_Kahler_Portfolio
 build_property._RazorSourceGeneratorDebug = 
 
-[c:/Judah_Kahler_Portfolio/Views/Portfolio/Connect_Four.cshtml]
+[C:/Judah_Kahler_Portfolio/Views/Portfolio/Connect_Four.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUG9ydGZvbGlvXENvbm5lY3RfRm91ci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Judah_Kahler_Portfolio/Views/Portfolio/Index.cshtml]
+[C:/Judah_Kahler_Portfolio/Views/Portfolio/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUG9ydGZvbGlvXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Judah_Kahler_Portfolio/Views/Portfolio/Training_App.cshtml]
+[C:/Judah_Kahler_Portfolio/Views/Portfolio/Training_App.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUG9ydGZvbGlvXFRyYWluaW5nX0FwcC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
