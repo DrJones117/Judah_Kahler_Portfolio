@@ -7,20 +7,23 @@ namespace Judah_Kahler_Portfolio
     {
         public Task SendEmailAsync(string email, string subject, string message)
         {
-            var mail = "@gmail.com";
-            var pw = "Password";
+            var mail = "judah.kahler@gmail.com";
+            var pw = "fgwu aneo isza vapw";
+
+            string completeMessage = message + " \r\n\r\n" + "Email: " + email;
 
             var client = new SmtpClient("smtp.gmail.com", 587)
             {
                 EnableSsl = true,
+                UseDefaultCredentials = false,
                 Credentials = new NetworkCredential(mail, pw)
             };
 
             return client.SendMailAsync(
                 new MailMessage(from: mail,
-                to: email,
+                to: mail,
                 subject,
-                message));
+                completeMessage));
         }
     }
 }
