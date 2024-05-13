@@ -6,72 +6,7 @@
 * License: https://bootstrapmade.com/license/
 */
 
-// Contact Form Validation
-// document.getElementById("contact-form").addEventListener("submit", (event) => {
-//   const contactForm = event.target
-//   if (!validateContactForm(contactForm)) {
-//     event.preventDefault();
-//     displayError(contactForm, 'Invalid input')
-//   }
-// });
-
-// // Function to validate email addresses
-// function isValidEmail(email) {
-//   // Define the JS Regex pattern for a valid email address
-//   const emailRegex = /^[a-zA-Z0-9.!#$%&'*+\/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/;
-  
-//   // Test the email against the pattern and return the result (true or false)
-//   return emailRegex.test(email);
-// }
-
-// // Function to validate phone numbers
-// function isValidPhoneNumber(phone) {
-//   // Define the JS Regex pattern for a valid 10-digit phone number
-//   const phoneRegex = /^\d{10}$/;
-  
-//   // Test the phone number against the pattern and return the result (true or false)
-//   return phoneRegex.test(phone);
-// }
-
-// // Function to validate the contact form
-// function validateContactForm(contactForm) {
-//   // Get the values entered in the form fields
-//   const name = contactForm["name"].value;
-//   const email = contactForm["email"].value;
-//   const subject = contactForm["subject"].value;
-//   const message = contactForm["message"].value;
-
-//   // Check if the required fields (name, email, and message) are empty
-//   // If any of them are empty, return false to prevent form submission
-//   if (!name || !email || !message || !subject){
-//     return false;
-//   }
-
-//   // Check if the email is valid using the isValidEmail function
-//   // If the phone field is not empty, also check if it is valid using the isValidPhoneNumber function
-//   // If either the email or the phone number is invalid, return false to prevent form submission
-//   if (!isValidEmail(email)) {
-//     return false;
-//   }
-
-//   // If all the validations pass, return true to allow form submission
-//   return true;
-// }
-
-// // Function to display an error message on the web page
-// function displayError(formElement, message) {
-//   const errorElement = formElement.getElementsByClassName("form-error")[0];
-  
-//   // Set the innerHTML of the error element to the provided error message
-//   errorElement.innerHTML = message;
-  
-//   // Change the display style of the error element to "block" to make it visible
-//   errorElement.style.display = "block";
-// }
-
-// ==============================
-
-(function() {
+(function () {
   "use strict";
 
   /**
@@ -157,7 +92,7 @@
   /**
    * Mobile nav toggle
    */
-  on('click', '.mobile-nav-toggle', function(e) {
+  on('click', '.mobile-nav-toggle', function (e) {
     select('body').classList.toggle('mobile-nav-active')
     this.classList.toggle('bi-list')
     this.classList.toggle('bi-x')
@@ -166,7 +101,7 @@
   /**
    * Scrool with ofset on links with a class name .scrollto
    */
-  on('click', '.scrollto', function(e) {
+  on('click', '.scrollto', function (e) {
     if (select(this.hash)) {
       e.preventDefault()
 
@@ -216,7 +151,7 @@
     new Waypoint({
       element: skilsContent,
       offset: '80%',
-      handler: function(direction) {
+      handler: function (direction) {
         let progress = select('.progress .progress-bar', true);
         progress.forEach((el) => {
           el.style.width = el.getAttribute('aria-valuenow') + '%'
@@ -237,9 +172,9 @@
 
       let portfolioFilters = select('#portfolio-flters li', true);
 
-      on('click', '#portfolio-flters li', function(e) {
+      on('click', '#portfolio-flters li', function (e) {
         e.preventDefault();
-        portfolioFilters.forEach(function(el) {
+        portfolioFilters.forEach(function (el) {
           el.classList.remove('filter-active');
         });
         this.classList.add('filter-active');
@@ -247,7 +182,7 @@
         portfolioIsotope.arrange({
           filter: this.getAttribute('data-filter')
         });
-        portfolioIsotope.on('arrangeComplete', function() {
+        portfolioIsotope.on('arrangeComplete', function () {
           AOS.refresh()
         });
       }, true);
@@ -320,6 +255,25 @@
     })
   });
 
+  /**
+   * Contact Form Validation
+   */
+  // const form = document.querySelector("contact-form");
+  // const email = document.getElementById("contact-form-email");
+  // const error = email.nextElementSibling;
+
+  //   // Email validation
+  // const emailRegExp =
+  // /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+
+  // // Checks if the email is valid
+  // window.addEventListener("load", () => {
+  //   emailRegExp.test(email.value);
+  //   email.className = isValid ? "valid" : "invalid";
+  // });
+
+
+  
   /**
    * Initiate Pure Counter 
    */

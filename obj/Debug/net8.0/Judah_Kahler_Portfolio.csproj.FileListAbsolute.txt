@@ -27,3 +27,8 @@ C:\Judah_Kahler_Portfolio\obj\Debug\net8.0\Judah_Kahler_Portfolio.RazorAssemblyI
 C:\Judah_Kahler_Portfolio\obj\Debug\net8.0\Judah_Kahler_Portfolio.RazorAssemblyInfo.cs
 C:\Judah_Kahler_Portfolio\bin\Debug\net8.0\Judah_Kahler_Portfolio.staticwebassets.runtime.json
 C:\Judah_Kahler_Portfolio\obj\Debug\net8.0\Judah_Kahler_Portfolio.sourcelink.json
+C:\Judah_Kahler_Portfolio\obj\Debug\net8.0\Judah_Kahler_Portfolio.csproj.AssemblyReference.cache
+C:\Judah_Kahler_Portfolio\bin\Debug\net8.0\BouncyCastle.Cryptography.dll
+C:\Judah_Kahler_Portfolio\bin\Debug\net8.0\MailKit.dll
+C:\Judah_Kahler_Portfolio\bin\Debug\net8.0\MimeKit.dll
+C:\Judah_Kahler_Portfolio\obj\Debug\net8.0\Judah_Kahler_Portfolio.csproj.CopyComplete

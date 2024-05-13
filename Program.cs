@@ -1,8 +1,9 @@
-using Judah_Kahler_Portfolio;
+global using Judah_Kahler_Portfolio.Services.EmailService;
+global using Judah_Kahler_Portfolio.Models;
 
 var builder = WebApplication.CreateBuilder(args);
 
-builder.Services.AddTransient<IEmailSender, EmailSender>();
+builder.Services.AddScoped<IEmailService, EmailService>();
 
 builder.Services.AddControllersWithViews();
 

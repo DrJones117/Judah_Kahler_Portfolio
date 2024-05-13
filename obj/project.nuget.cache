@@ -1,8 +1,14 @@
 {
   "version": 2,
-  "dgSpecHash": "DXIVGtWdhQBsxEGJo3oNc6XvPSO3vp4XyWar3lu93r15DGhYN21o0+m5WX+Vbr4wHRVqrrSPbiyXZ/fuDoqExQ==",
+  "dgSpecHash": "0z/t5uJEgQC31oVqBgkT423JsEvqOegyM77ZDifWDbe52F0ohKs5Ln/r/DHjcPc8/QyEHXnL8FRuIgaohBLMQA==",
   "success": true,
   "projectFilePath": "C:\\Judah_Kahler_Portfolio\\Judah_Kahler_Portfolio.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\judah\\.nuget\\packages\\bouncycastle.cryptography\\2.3.0\\bouncycastle.cryptography.2.3.0.nupkg.sha512",
+    "C:\\Users\\judah\\.nuget\\packages\\mailkit\\4.5.0\\mailkit.4.5.0.nupkg.sha512",
+    "C:\\Users\\judah\\.nuget\\packages\\mimekit\\4.5.0\\mimekit.4.5.0.nupkg.sha512",
+    "C:\\Users\\judah\\.nuget\\packages\\system.formats.asn1\\8.0.0\\system.formats.asn1.8.0.0.nupkg.sha512",
+    "C:\\Users\\judah\\.nuget\\packages\\system.security.cryptography.pkcs\\8.0.0\\system.security.cryptography.pkcs.8.0.0.nupkg.sha512"
+  ],
   "logs": []
 }
