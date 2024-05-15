@@ -9,7 +9,11 @@ builder.Services.AddControllersWithViews();
 
 var app = builder.Build();
 
+app.UseDefaultFiles();
 app.UseStaticFiles();
+
+app.UseHttpsRedirection();
+
 app.UseRouting();
 app.UseAuthorization();
 

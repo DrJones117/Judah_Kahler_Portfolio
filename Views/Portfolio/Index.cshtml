@@ -3,8 +3,43 @@
 <html lang="en">
 
 <head>
-  @using Judah_Kahler_Portfolio.Models
-  @model ContactForm
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+  /**
+   * Takes the form data and sends it to the SendEmail route in the Email controller
+   */
+  const sendMessage = () => {
+    var email = document.getElementById("email").value;
+    var subject = document.getElementById("subject").value;
+    var body = document.getElementById("body").value;
+
+    console.log("=============" + email + subject + body + "=============")
+    
+    var emailData = {
+      to: "judah.kahler@gmail.com",
+      from: email,
+      subject: subject,
+      body: body
+    };
+
+    fetch("/api/Email/send", {
+      method: "POST",
+      headers: {
+        'Accept': "application/json",
+        'Content-Type': "application/json"
+      },
+      body: JSON.stringify(emailData)
+    })
+    .then(response => response.json())
+    .then(() => {
+      console.log('Email sent successfully');
+      alert("Email Sent!");
+    })
+    .catch(error => console.error('Message failed to send.', error));
+  }
+</script>
+
+
 
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
@@ -666,68 +701,25 @@
           </div>
 
           <div class="col-lg-7 mt-5 mt-lg-0 d-flex align-items-stretch">
-            @* <form id="contact-form" action="/SendEmail" method="POST" class="php-email-form">
-            <div class="row">
-            <div class="form-group col-md-6">
-            <label for="contact-form-name">Your Name</label>
-            <input type="text" name="name" class="form-control" id="contact-form-name" required>
-            </div>
-            <div class="form-group col-md-6">
-            <label for="contact-form-email">Your Email</label>
-            <input type="email" class="form-control" name="email" id="contact-form-email"
-            required>
-            </div>
-            </div>
-            <div class="form-group">
-            <label for="contact-form-subject">Subject</label>
-            <input type="text" class="form-control" name="subject" id="contact-form-subject"
-            required>
-            </div>
-            <div class="form-group">
-            <label for="contact-form-message">Message</label>
-            <textarea class="form-control" id="contact-form-message" name="message" rows="10"
-            required></textarea>
-            </div>
-            <div class="my-3">
-            <div class="loading">Loading</div>
-            <div class="error-message"></div>
-            <div class="sent-message">Your message has been sent. Thank you!</div>
-            </div>
-            <div class="text-center"><button type="submit">Send Message</button></div>
-            </form> *@
-
-
-            @* class="php-email-form" *@
-            <form asp-controller="Portfolio" asp-action="SendEmail">
+            <form id="emailForm" onsubmit="sendMessage()">
               <div class="row">
                 <div class="form-group col-md-6">
-                  <label asp-for="Email">Your Email</label>
-                  <input asp-for="Email" class="form-control">
-                  <span asp-validation-for="Email" class="text-red" id="email"></span>
+                  <label for="email">Your Email</label>
+                  <input type="email" id="email" class="form-control" required>
                 </div>
               </div>
               <div class="form-group">
-                <label asp-for="Subject">Subject</label>
-                <input asp-for="Subject" class="form-control">
-                <span asp-validation-for="Subject" class="text-red"></span>
+                <label for="subject">Subject</label>
+                <input type="text" id="subject" class="form-control" required>
               </div>
               <div class="form-group">
-                <label asp-for="Message">Message</label>
-                <textarea asp-for="Message" class="form-control" rows="10"></textarea>
-                <span asp-validation-for="Message" class="text-red" id="message"></span>
+                <label for="body">Message</label>
+                <textarea id="body" class="form-control" rows="10" required></textarea>
               </div>
-              @* <div class="my-3">
-              <div class="loading">Loading</div>
-              <div class="error-message"></div>
-              <div class="sent-message">Your message has been sent. Thank you!</div>
-              </div> *@
-              <div class="text-center"><button type="submit">Send Message</button></div>
+              <button type="submit">Send Message</button>
             </form>
-
           </div>
-
         </div>
-
       </div>
     </section><!-- End Contact Section -->
 
@@ -765,9 +757,6 @@
 
   <!-- Template Main JS File -->
   <script src="~/js/main.js"></script>
-  <script>
-
-  </script>
 
 </body>
 
