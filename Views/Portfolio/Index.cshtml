@@ -4,42 +4,7 @@
 
 <head>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<script>
-  /**
-   * Takes the form data and sends it to the SendEmail route in the Email controller
-   */
-  const sendMessage = () => {
-    var email = document.getElementById("email").value;
-    var subject = document.getElementById("subject").value;
-    var body = document.getElementById("body").value;
-
-    console.log("=============" + email + subject + body + "=============")
-    
-    var emailData = {
-      to: "judah.kahler@gmail.com",
-      from: email,
-      subject: subject,
-      body: body
-    };
-
-    fetch("/api/Email/send", {
-      method: "POST",
-      headers: {
-        'Accept': "application/json",
-        'Content-Type': "application/json"
-      },
-      body: JSON.stringify(emailData)
-    })
-    .then(response => response.json())
-    .then(() => {
-      console.log('Email sent successfully');
-      alert("Email Sent!");
-    })
-    .catch(error => console.error('Message failed to send.', error));
-  }
-</script>
-
-
+  <script src="~/js/email.js"></script>
 
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
@@ -694,14 +659,14 @@
 
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1890.4869696955502!2d-94.40044742994634!3d37.166787292363075!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87c87e298455e615%3A0x865557ff21b58b7b!2s18931%20Hyacinth%20Rd%2C%20Carthage%2C%20MO%2064836!5e0!3m2!1sen!2sus!4v1714675323617!5m2!1sen!2sus"
-                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                width="375" height="450" style="border:0;" allowfullscreen="" loading="lazy"
                 referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
 
           </div>
 
           <div class="col-lg-7 mt-5 mt-lg-0 d-flex align-items-stretch">
-            <form id="emailForm" onsubmit="sendMessage()">
+            <form id="emailForm" class="emailForm" onsubmit="event.preventDefault(); sendMessage();">
               <div class="row">
                 <div class="form-group col-md-6">
                   <label for="email">Your Email</label>
@@ -716,7 +681,7 @@
                 <label for="body">Message</label>
                 <textarea id="body" class="form-control" rows="10" required></textarea>
               </div>
-              <button type="submit">Send Message</button>
+              <button class="bg-primary rounded mt-3" type="submit">Send Message</button>
             </form>
           </div>
         </div>

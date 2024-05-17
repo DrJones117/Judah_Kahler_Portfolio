@@ -9,43 +9,6 @@
 
   (function () {
     "use strict";
-
-    // /**
-    //  * Takes the form data and sends it to the SendEmail route in the Email controller
-    //  */
-    // const sendEmail = () => {
-
-    //   console.log("Send email function called.")
-
-    //   var email = document.getElementById("email").value;
-    //   var subject = document.getElementById("subject").value;
-    //   var message = document.getElementById("message").value;
-
-    //   var emailData = {
-    //     to: "judah.kahler@gmail.com",
-    //     from: email,
-    //     subject: subject,
-    //     message: message
-    //   };
-
-    //   $.ajax({
-    //     type: "POST",
-    //     url: "/api/email/send",
-    //     contentType: "application/json",
-    //     data: JSON.stringify(emailData),
-    //     success: function (response) {
-    //       console.log(response);
-    //       alert("Email sent!");
-    //     },
-    //     error: function (xhr, status, error) {
-    //       console.error(xhr.responseText);
-    //       alert("Failed to send email. Please try again later.");
-    //     }
-    //   });
-
-    //   return false;
-    // }
-
     /**
      * Easy selector helper function
      */

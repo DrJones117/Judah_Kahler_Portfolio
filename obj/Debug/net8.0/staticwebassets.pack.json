@@ -101,6 +101,10 @@
       "PackagePath": "staticwebassets\\img\\testimonials\\testimonials-5.jpg"
     },
     {
+      "Id": "C:\\Judah_Kahler_Portfolio\\wwwroot\\js\\email.js",
+      "PackagePath": "staticwebassets\\js\\email.js"
+    },
+    {
       "Id": "C:\\Judah_Kahler_Portfolio\\wwwroot\\js\\main.js",
       "PackagePath": "staticwebassets\\js\\main.js"
     },

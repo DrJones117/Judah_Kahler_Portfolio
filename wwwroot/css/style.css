@@ -1104,3 +1104,107 @@ section {
     padding-right: 20px 15px;
   }
 }
+
+/* 
+  Email Form ====================================
+ */
+
+/* General form styling */
+.emailForm {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive grid for form rows */
+.emailForm .row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 15px;
+}
+
+.emailForm .form-group {
+  margin-bottom: 15px;
+  flex: 1 1 100%;
+}
+
+/* Labels and Inputs */
+.emailForm label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #333;
+}
+
+.emailForm input,
+.emailForm textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.emailForm input:focus,
+.emailForm textarea:focus {
+  border-color: #007bff;
+  outline: none;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+/* Submit Button */
+.emailForm button {
+  width: 350px;
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+.emailForm button:hover {
+  background-color: #0056b3;
+}
+
+.emailForm button:focus {
+  outline: none;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+/* Media Queries for responsiveness */
+@media (min-width: 576px) {
+  .emailForm .form-group.col-md-6 {
+    flex: 1 1 48%;
+    margin-right: 4%;
+  }
+
+  .emailForm .form-group.col-md-6:last-child {
+    margin-right: 0;
+  }
+}
+
+@media (min-width: 768px) {
+  .emailForm {
+    padding: 30px;
+  }
+}
+
+@media (min-width: 992px) {
+  .emailForm {
+    max-width: 700px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .emailForm {
+    max-width: 800px;
+  }
+}

@@ -1,29 +1,39 @@
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Logging;
 
 namespace Judah_Kahler_Portfolio.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]
-    public class EmailController : ControllerBase{
+    public class EmailController : ControllerBase
+    {
         private readonly IEmailService _emailService;
+        private readonly ILogger<EmailController> _logger;
 
-        public EmailController(IEmailService emailService)
+        public EmailController(IEmailService emailService, ILogger<EmailController> logger)
         {
             _emailService = emailService;
+            _logger = logger;
         }
 
         [HttpPost("send")]
         public IActionResult SendEmail([FromBody] EmailDto request)
-        {
-            Console.WriteLine("Backend Function called" + "Email: " + request.From + " Subject: " + request.Subject + "Message: " + request.Body);
+        { 
+            if (request == null)
+            {
+                return BadRequest(new { success = false, message = "Email request is null." });
+            }
+
             try
             {
                 _emailService.SendEmail(request);
-                return StatusCode(200, "Message Sent!");
+                _logger.LogInformation("Email sent!");
+                return Ok(new { success = true, message = "Email sent successfully!" });
             }
             catch (Exception ex)
             {
-                return StatusCode(500, $"Internal server error: {ex.Message}");
+                _logger.LogError(ex, "Error occurred. Please try again later.");
+                return StatusCode(500, new { success = false, message = $"Internal server error: {ex.Message}" });
             }
         }
     }
