@@ -21,7 +21,7 @@ namespace Judah_Kahler_Portfolio.Services.EmailService
             email.From.Add(MailboxAddress.Parse(request.From));
             email.To.Add(MailboxAddress.Parse(request.To));
             email.Subject = request.Subject;
-            email.Body = new TextPart(TextFormat.Text) { Text = request.Body};
+            email.Body = new TextPart(TextFormat.Html) { Text = request.From + "<br/>" + request.Body};
 
             using var smtp = new SmtpClient();
             smtp.Connect(_config.GetSection("EmailHost").Value, 587, SecureSocketOptions.StartTls);
