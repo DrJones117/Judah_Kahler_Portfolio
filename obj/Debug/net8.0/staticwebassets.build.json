@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "oRMOBInPlQzRDunsbPfomuv+eqHhcTo37fzBNH2S8Ek=",
+  "Hash": "ESkQIZRv/eGkrHW8Q9gUDhTblAiYvw0HTtIzOcC3gA4=",
   "Source": "Judah_Kahler_Portfolio",
   "BasePath": "_content/Judah_Kahler_Portfolio",
   "Mode": "Default",
@@ -93,12 +93,12 @@
       "OriginalItemSpec": "wwwroot\\img\\GitHub.jpeg"
     },
     {
-      "Identity": "C:\\Judah_Kahler_Portfolio\\wwwroot\\img\\hero-bg.jpg",
+      "Identity": "C:\\Judah_Kahler_Portfolio\\wwwroot\\img\\j_web1.png",
       "SourceId": "Judah_Kahler_Portfolio",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Judah_Kahler_Portfolio\\wwwroot\\",
       "BasePath": "_content/Judah_Kahler_Portfolio",
-      "RelativePath": "img/hero-bg.jpg",
+      "RelativePath": "img/j_web1.png",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -109,7 +109,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\img\\hero-bg.jpg"
+      "OriginalItemSpec": "wwwroot\\img\\j_web1.png"
     },
     {
       "Identity": "C:\\Judah_Kahler_Portfolio\\wwwroot\\img\\portfolio\\Client_dashboard.png",
