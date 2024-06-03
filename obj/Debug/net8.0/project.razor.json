@@ -19334,13 +19334,13 @@
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Judah_Kahler_Portfolio\\Index.cshtml",
-      "TargetPath": "Index.cshtml",
+      "FilePath": "c:\\Judah_Kahler_Portfolio\\Views\\Portfolio\\Connect_Four.cshtml",
+      "TargetPath": "Views\\Portfolio\\Connect_Four.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Judah_Kahler_Portfolio\\Views\\Portfolio\\Connect_Four.cshtml",
-      "TargetPath": "Views\\Portfolio\\Connect_Four.cshtml",
+      "FilePath": "c:\\Judah_Kahler_Portfolio\\Views\\Portfolio\\Index.cshtml",
+      "TargetPath": "Views\\Portfolio\\Index.cshtml",
       "FileKind": "mvc"
     }
   ],
