@@ -1,0 +1,10 @@
+C:\Judah_Kahler_Portfolio\bin\Release\net8.0\publish\Judah_Kahler_Portfolio.exe
+C:\Judah_Kahler_Portfolio\bin\Release\net8.0\publish\appsettings.Development.json
+C:\Judah_Kahler_Portfolio\bin\Release\net8.0\publish\appsettings.json
+C:\Judah_Kahler_Portfolio\bin\Release\net8.0\publish\Judah_Kahler_Portfolio.dll
+C:\Judah_Kahler_Portfolio\bin\Release\net8.0\publish\Judah_Kahler_Portfolio.deps.json
+C:\Judah_Kahler_Portfolio\bin\Release\net8.0\publish\Judah_Kahler_Portfolio.runtimeconfig.json
+C:\Judah_Kahler_Portfolio\bin\Release\net8.0\publish\Judah_Kahler_Portfolio.pdb
+C:\Judah_Kahler_Portfolio\bin\Release\net8.0\publish\BouncyCastle.Cryptography.dll
+C:\Judah_Kahler_Portfolio\bin\Release\net8.0\publish\MailKit.dll
+C:\Judah_Kahler_Portfolio\bin\Release\net8.0\publish\MimeKit.dll
