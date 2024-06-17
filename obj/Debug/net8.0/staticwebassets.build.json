@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "DhaqU35os5w1DjI3G0lH2K8RoYS9fUIUxLLFBJHBBO0=",
+  "Hash": "VOCkEF3dkvmrDTKGtNAYiY+53qecJcRVRTIIXNvoshQ=",
   "Source": "Judah_Kahler_Portfolio",
   "BasePath": "_content/Judah_Kahler_Portfolio",
   "Mode": "Default",
@@ -378,12 +378,12 @@
       "OriginalItemSpec": "wwwroot\\img\\profile-img.jpg"
     },
     {
-      "Identity": "C:\\Judah_Kahler_Portfolio\\wwwroot\\img\\ProfilePicture.jpg",
+      "Identity": "C:\\Judah_Kahler_Portfolio\\wwwroot\\img\\ProfilePic.JPG",
       "SourceId": "Judah_Kahler_Portfolio",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Judah_Kahler_Portfolio\\wwwroot\\",
       "BasePath": "_content/Judah_Kahler_Portfolio",
-      "RelativePath": "img/ProfilePicture.jpg",
+      "RelativePath": "img/ProfilePic.JPG",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -394,7 +394,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\img\\ProfilePicture.jpg"
+      "OriginalItemSpec": "wwwroot\\img\\ProfilePic.JPG"
     },
     {
       "Identity": "C:\\Judah_Kahler_Portfolio\\wwwroot\\img\\testimonials\\testimonials-1.jpg",
