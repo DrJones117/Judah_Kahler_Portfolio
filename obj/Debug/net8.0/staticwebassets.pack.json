@@ -105,6 +105,10 @@
       "PackagePath": "staticwebassets\\img\\webhero_compressed.png"
     },
     {
+      "Id": "C:\\Judah_Kahler_Portfolio\\wwwroot\\img\\webhero_compressed_mobile.png",
+      "PackagePath": "staticwebassets\\img\\webhero_compressed_mobile.png"
+    },
+    {
       "Id": "C:\\Judah_Kahler_Portfolio\\wwwroot\\js\\email.js",
       "PackagePath": "staticwebassets\\js\\email.js"
     },

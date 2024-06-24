@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "VOCkEF3dkvmrDTKGtNAYiY+53qecJcRVRTIIXNvoshQ=",
+  "Hash": "p5XR75VGzHnRfmiuEmIY2ceDDPUhOKcoDzDdIxrXXjA=",
   "Source": "Judah_Kahler_Portfolio",
   "BasePath": "_content/Judah_Kahler_Portfolio",
   "Mode": "Default",
@@ -490,6 +490,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\img\\testimonials\\testimonials-5.jpg"
+    },
+    {
+      "Identity": "C:\\Judah_Kahler_Portfolio\\wwwroot\\img\\webhero_compressed_mobile.png",
+      "SourceId": "Judah_Kahler_Portfolio",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Judah_Kahler_Portfolio\\wwwroot\\",
+      "BasePath": "_content/Judah_Kahler_Portfolio",
+      "RelativePath": "img/webhero_compressed_mobile.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\webhero_compressed_mobile.png"
     },
     {
       "Identity": "C:\\Judah_Kahler_Portfolio\\wwwroot\\img\\webhero_compressed.png",
