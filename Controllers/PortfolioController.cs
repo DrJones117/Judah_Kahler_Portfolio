@@ -14,7 +14,7 @@ public class PortfolioController : Controller
     [Route("")] 
     public ViewResult Index()        
     {            
-        return View("index");        
+        return View("Index");   
     }   
 
     [HttpGet]

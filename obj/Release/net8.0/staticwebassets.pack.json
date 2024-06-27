@@ -9,8 +9,8 @@
       "PackagePath": "staticwebassets\\img\\GitHub.jpeg"
     },
     {
-      "Id": "C:\\Judah_Kahler_Portfolio\\wwwroot\\img\\ProfilePicture.jpg",
-      "PackagePath": "staticwebassets\\img\\ProfilePicture.jpg"
+      "Id": "C:\\Judah_Kahler_Portfolio\\wwwroot\\img\\ProfilePic.JPG",
+      "PackagePath": "staticwebassets\\img\\ProfilePic.JPG"
     },
     {
       "Id": "C:\\Judah_Kahler_Portfolio\\wwwroot\\img\\apple-touch-icon.png",
@@ -99,6 +99,14 @@
     {
       "Id": "C:\\Judah_Kahler_Portfolio\\wwwroot\\img\\testimonials\\testimonials-5.jpg",
       "PackagePath": "staticwebassets\\img\\testimonials\\testimonials-5.jpg"
+    },
+    {
+      "Id": "C:\\Judah_Kahler_Portfolio\\wwwroot\\img\\webhero_compressed.png",
+      "PackagePath": "staticwebassets\\img\\webhero_compressed.png"
+    },
+    {
+      "Id": "C:\\Judah_Kahler_Portfolio\\wwwroot\\img\\webhero_compressed_mobile.png",
+      "PackagePath": "staticwebassets\\img\\webhero_compressed_mobile.png"
     },
     {
       "Id": "C:\\Judah_Kahler_Portfolio\\wwwroot\\js\\email.js",

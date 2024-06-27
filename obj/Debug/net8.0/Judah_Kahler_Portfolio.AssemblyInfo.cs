@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Judah_Kahler_Portfolio")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6c7814446f5790ed46773121ba790b70e666fb10")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4322e79aaec13200e00d15ae245de75fef310a68")]
 [assembly: System.Reflection.AssemblyProductAttribute("Judah_Kahler_Portfolio")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Judah_Kahler_Portfolio")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
