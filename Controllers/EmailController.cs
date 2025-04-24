@@ -16,23 +16,38 @@ namespace Judah_Kahler_Portfolio.Controllers
         }
 
         [HttpPost("send")]
-        public IActionResult SendEmail([FromBody] EmailDto request)
+        public async Task<IActionResult> SendEmail([FromBody] EmailDto request)
         { 
-            if (request == null)
+            // if (request == null)
+            // {
+            //     return BadRequest(new { success = false, message = "Email request is null." });
+            // }
+            if (!ModelState.IsValid)
             {
-                return BadRequest(new { success = false, message = "Email request is null." });
+                var errors = ModelState.Values
+                .SelectMany(v => v.Errors.Select(e => e.ErrorMessage))
+                .ToList();
+
+                return BadRequest(new
+                {
+                    Message = "Validation failed",
+                    Errors = errors
+                });
             }
 
             try
             {
-                _emailService.SendEmail(request);
-                _logger.LogInformation("Email sent!");
-                return Ok(new { success = true, message = "Email sent successfully!" });
+                await _emailService.SendEmail(request);
+                return Ok(new { Message = "Thank you for your message!" });
             }
             catch (Exception ex)
             {
                 _logger.LogError(ex, "Error occurred. Please try again later.");
-                return StatusCode(500, new { success = false, message = $"Internal server error: {ex.Message}" });
+                return StatusCode(500, new 
+                { 
+                    Message = "Failed to send email.",
+                    Error = ex.Message
+                });
             }
         }
     }

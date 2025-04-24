@@ -13,22 +13,33 @@ namespace Judah_Kahler_Portfolio.Services.EmailService
         {
             _config = config;
         }
-        public void SendEmail(EmailDto request)
+        public async Task SendEmail(EmailDto request)
         {
-            Console.WriteLine("Info = " + request.From + " " + request.Subject + " " + request.Body);
+            // Console.WriteLine("Info = " + request.From + " " + request.Subject + " " + request.Body);
+
+            // var email = new MimeMessage();
+            // email.From.Add(MailboxAddress.Parse(request.From));
+            // email.To.Add(MailboxAddress.Parse(request.To));
+            // email.Subject = request.Subject;
+            // email.Body = new TextPart(TextFormat.Html) { Text = request.From + "<br/>" + request.Body};
+
+            // using var smtp = new SmtpClient();
+            // smtp.Connect(_config.GetSection("EmailHost").Value, 587, SecureSocketOptions.StartTls);
+            // smtp.Authenticate(_config.GetSection("EmailUserName").Value, _config.GetSection("EmailPassword").Value);
+            // smtp.Send(email);
+            // smtp.Disconnect(true);
 
             var email = new MimeMessage();
-            email.From.Add(MailboxAddress.Parse(request.From));
-            email.To.Add(MailboxAddress.Parse(request.To));
+            email.From.Add(MailboxAddress.Parse(_config.GetSection("EmailUserName").Value));
+            email.To.Add(MailboxAddress.Parse(_config.GetSection("EmailUserName").Value));
             email.Subject = request.Subject;
-            email.Body = new TextPart(TextFormat.Html) { Text = request.From + "<br/>" + request.Body};
+            email.Body = new TextPart(TextFormat.Html) { Text = $"From: {request.From} <br></br><br></br> {request.Body}" };
 
             using var smtp = new SmtpClient();
-            smtp.Connect(_config.GetSection("EmailHost").Value, 587, SecureSocketOptions.StartTls);
-            smtp.Authenticate(_config.GetSection("EmailUserName").Value, _config.GetSection("EmailPassword").Value);
-            smtp.Send(email);
-            smtp.Disconnect(true);
+            await smtp.ConnectAsync(_config.GetSection("EmailHost").Value, 587, SecureSocketOptions.StartTls);
+            await smtp.AuthenticateAsync(_config.GetSection("EmailUserName").Value, _config.GetSection("EmailPassword").Value);
+            await smtp.SendAsync(email);
+            await smtp.DisconnectAsync(true);
         }
-
     }
 }
