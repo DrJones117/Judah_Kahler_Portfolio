@@ -1,50 +1,3 @@
-// const sendMessage = () => {
-//     var email = document.getElementById("email").value;
-//     var subject = document.getElementById("subject").value;
-//     var body = document.getElementById("body").value;
-
-//     // Basic input validation
-//     if (!email || !subject || !body) {
-//         alert("Please fill out all fields.");
-//         return;
-//     }
-
-//     var emailData = {
-//         to: "judah.kahler@gmail.com",
-//         from: email,
-//         subject: subject,
-//         body: body
-//     };
-
-//     fetch("/api/Email/send", {
-//         method: "POST",
-//         headers: {
-//             'Accept': "application/json",
-//             'Content-Type': "application/json"
-//         },
-//         body: JSON.stringify(emailData)
-//     })
-//     .then(response => {
-//         if (!response.ok) {
-//             throw new Error('Network response was not ok');
-//         }
-//         return response.json();
-//     })
-//     .then(data => {
-//         if (data.success) {
-//             console.log("Email Sent!");
-//             alert(data.message);
-//         } else {
-//             console.error("Message failed to send", data.error);
-//             alert(data.message);
-//         }
-//     })
-//     .catch(error => {
-//         console.log('Error sending message:', error);
-//         alert("An unexpected error occurred. Please try again later.");
-//     });
-// };
-
 const sendMessage = () => {
     const emailData = {
         From: document.querySelector('[name="email"]').value,
@@ -86,27 +39,6 @@ const sendMessage = () => {
     });
 };
 
-// Send validation errors back
-function displayValidationErrors(errors) {
-    const errorContainer = document.getElementById("errorContainer");
-    
-    // Clear any existing errors
-    errorContainer.innerHTML = "";
-
-    // Loop through each field's errors and display them
-    for (let field in errors) {
-        if (errors.hasOwnProperty(field)) {
-            // For each field, loop through its associated errors
-            errors[field].forEach(errorMessage => {
-                const errorItem = document.createElement('p');
-                errorItem.textContent = errorMessage;
-                errorItem.style.color = "red"; // Style error text as red
-                errorContainer.appendChild(errorItem);
-            });
-        }
-    }
-}
-
 function displaySuccessMessage(success) {
     const successContainer = document.getElementById("successMessage");
 
@@ -138,4 +70,26 @@ function displaySuccessMessage(success) {
     setTimeout(() => {
         successItem.style.opacity = "0";  // Set opacity to 0 for fade-out effect
     }, 4000);  // Delay of 4 seconds before fading out
+}
+
+
+// Send validation errors back
+function displayValidationErrors(errors) {
+    const errorContainer = document.getElementById("errorContainer");
+    
+    // Clear any existing errors
+    errorContainer.innerHTML = "";
+
+    // Loop through each field's errors and display them
+    for (let field in errors) {
+        if (errors.hasOwnProperty(field)) {
+            // For each field, loop through its associated errors
+            errors[field].forEach(errorMessage => {
+                const errorItem = document.createElement('p');
+                errorItem.textContent = errorMessage;
+                errorItem.style.color = "red"; // Style error text as red
+                errorContainer.appendChild(errorItem);
+            });
+        }
+    }
 }
