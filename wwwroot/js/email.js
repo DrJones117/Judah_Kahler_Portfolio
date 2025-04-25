@@ -53,6 +53,12 @@ const sendMessage = () => {
         ConfirmEmail: document.querySelector('[name="confirmEmail"]').value
     };
 
+    // Validate ConfirmEmail matches email
+    if (emailData.From !== emailData.ConfirmEmail) {
+        alert("Email and Confirm Email do not match.");
+        return;
+    }
+
     fetch('/api/Email/send', {
         method: 'POST',
         headers: {
@@ -60,30 +66,23 @@ const sendMessage = () => {
         },
         body: JSON.stringify(emailData)
     })
-    .then(response => response.json().then(data => ({ status: response.status, body: data })))
-    .then(({ status, body }) => {
-        if (status === 200) {
-            console.log('Success:', body.message);
-
-            successMessage(body.message);
-
-            // Clear form after success
-            document.querySelector('[name="email"]').value = "";
-            document.querySelector('[name="subject"]').value = "";
-            document.querySelector('[name="message"]').value = "";
-            document.querySelector('[name="confirmEmail"]').value = "";
-
-        } else if (status === 400) {
-            // Handle validation errors
-            console.error('Validation failed:', body.errors);
-            displayValidationErrors(body.errors); // Call a function to display validation messages
-        } else {
-            console.error('Error:', body.Message || 'Failed to send email');
+    .then(response => {
+        if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
         }
+        return response.json();
+    })
+    .then(data => {
+        console.log('Success:', data.message);
+
+        displaySuccessMessage(data.message);
+
+        // Reset the form
+        document.getElementById("emailForm").reset();
     })
     .catch(error => {
-        console.log("Debug Message: ", error)
-        console.error('Error:', error)
+        console.error('Error:', error);
+        alert("An unexpected error occurred. Please try again later.");
     });
 };
 
@@ -106,4 +105,37 @@ function displayValidationErrors(errors) {
             });
         }
     }
+}
+
+function displaySuccessMessage(success) {
+    const successContainer = document.getElementById("successMessage");
+
+    // Clear any existing messages
+    successContainer.innerHTML = "";
+
+    // Create a new success message element
+    const successItem = document.createElement("p");
+    successItem.textContent = success;  // Use the success message passed into the function
+    successItem.style.color = "green";  // Style it as green for success
+
+    // Add custom styles for the success message
+    successItem.style.border = "1px solid green";      // Green border
+    successItem.style.backgroundColor = "#f9f9f9";     // Off-white background
+    successItem.style.padding = "10px";                // Padding for spacing
+    successItem.style.borderRadius = "5px";            // Rounded corners
+    successItem.style.opacity = "0";                   // Start with opacity 0 for fade-in effect
+    successItem.style.transition = "opacity 2s ease";  // Transition for fade-in effect
+
+    // Append the message to the container
+    successContainer.appendChild(successItem);
+
+    // Trigger fade-in after a brief delay
+    setTimeout(() => {
+        successItem.style.opacity = "1";  // Set opacity to 1 for fade-in effect
+    }, 100);  // Delay of 100ms to trigger the transition
+
+    // Trigger fade-out after a few seconds
+    setTimeout(() => {
+        successItem.style.opacity = "0";  // Set opacity to 0 for fade-out effect
+    }, 4000);  // Delay of 4 seconds before fading out
 }
