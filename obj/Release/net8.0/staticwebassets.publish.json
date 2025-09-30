@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "A6DMnCZ4D9SQvX/Oz00w27RepZPb4/DqKretQlJkE3Q=",
+  "Hash": "71lUJd6dVRNwj+xMFZfNc2yh6YB0W0enqLS/chDdRT0=",
   "Source": "Judah_Kahler_Portfolio",
   "BasePath": "_content/Judah_Kahler_Portfolio",
   "Mode": "Default",
@@ -357,25 +357,6 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\img\\portfolio\\portfolio-details-3.jpg"
-    },
-    {
-      "Identity": "C:\\Judah_Kahler_Portfolio\\wwwroot\\img\\profile-img.jpg",
-      "SourceId": "Judah_Kahler_Portfolio",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Judah_Kahler_Portfolio\\wwwroot\\",
-      "BasePath": "_content/Judah_Kahler_Portfolio",
-      "RelativePath": "img/profile-img.jpg",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\img\\profile-img.jpg"
     },
     {
       "Identity": "C:\\Judah_Kahler_Portfolio\\wwwroot\\img\\ProfilePic.JPG",
